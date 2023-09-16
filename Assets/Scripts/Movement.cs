@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour{
     [SerializeField]private float speed;
     private Rigidbody2D body;
+    public float Threashold;
     private bool grounded = true;
     private Vector3 SpawnPosition;
     private void Awake(){
@@ -20,7 +21,12 @@ public class Movement : MonoBehaviour{
         if(Input.GetKey(KeyCode.Space)&& grounded){
             Jump();
         }
+        if(transform.position.y<Threashold){
+            
+            Reset();
+        }
     }
+
     private void Jump(){
         body.velocity = new Vector2(body.velocity.x,speed);
         grounded = false;
