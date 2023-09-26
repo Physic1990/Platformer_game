@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour{
     private float CurrentPlayerHealth;
     public EventTrigger.TriggerEvent DeathTrigger;
     public TextMeshPro Wintext;
+    public TextMeshPro Scoretext;
+
+    public float Score = 0f;
+
     public static bool GameIsPaused = false;
     public void LevelFinish(){
         //Debug.Log("Player Won");
@@ -20,7 +24,8 @@ public class GameManager : MonoBehaviour{
         Wintext.enabled = false;
         CurrentPlayerHealth = PlayerHealth;
         Health.text = "Health: " + CurrentPlayerHealth;
-
+        Scoretext.text = "Score: "+ Score;
+        Score = 0f;
     }
     public void PlayerDamaged(){
         CurrentPlayerHealth--;
@@ -44,5 +49,10 @@ public class GameManager : MonoBehaviour{
     void Pause(){
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+    public void ScoreIncrease(){
+        Score++;
+        Scoretext.text = "Score: "+ Score;
+
     }
 }
