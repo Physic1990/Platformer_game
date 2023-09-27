@@ -3,24 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour{
-    public float MoveSpeed = 5f;
-    public float Distance = 2f;
-    public Transform GroundDetect;
+    [Header ("Patrol Points")]
+    [SerializeField]private Transform leftEdge;
+    [SerializeField]private Transform rightEdge;
 
-    private bool MovingRight = true;
+    [Header ("Enemy")]
+    [SerializeField] private Transform enemy;
+
+    [Header("Movement parameters")]
+    [SerializeField] private float speed;
 
     private void Update(){
-        RaycastHit2D groundInfo = Physics2D.Raycast(GroundDetect.position, Vector2.down, Distance);
-        transform.Translate(Vector2.right*MoveSpeed * Time.deltaTime);
-       
-        if(groundInfo.collider==false){
-            if(MovingRight == true){
-                transform.eulerAngles = new Vector3(0,-180,0);
-                MovingRight = false;
-            }else{
-                transform.eulerAngles = new Vector3(0,0,0);
-                MovingRight = true;
-            }
-        }
+        MoveInDirection(1);
+    }
+
+    private void MoveInDirection(int _direction){
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime *_direction*speed,enemy.position.y,enemy.position.z);
     }
 }
