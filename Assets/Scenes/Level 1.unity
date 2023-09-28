@@ -2151,7 +2151,7 @@ MonoBehaviour:
   leftEdge: {fileID: 1335117098}
   rightEdge: {fileID: 810483447}
   enemy: {fileID: 1309529057}
-  speed: 1
+  speed: 5
 --- !u!1 &955408043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,7 +3379,6 @@ GameObject:
   - component: {fileID: 1309529060}
   - component: {fileID: 1309529059}
   - component: {fileID: 1309529058}
-  - component: {fileID: 1309529061}
   - component: {fileID: 1309529062}
   m_Layer: 0
   m_Name: Enemy
@@ -3527,22 +3526,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1309529061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309529056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2579fd178bc74b84da34ad7238c059cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftEdge: {fileID: 0}
-  rightEdge: {fileID: 0}
-  enemy: {fileID: 0}
-  speed: 0
 --- !u!114 &1309529062
 MonoBehaviour:
   m_ObjectHideFlags: 0
