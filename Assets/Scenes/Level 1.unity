@@ -2148,10 +2148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2579fd178bc74b84da34ad7238c059cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 235162723}
+  distance: 0
   leftEdge: {fileID: 1335117098}
   rightEdge: {fileID: 810483447}
   enemy: {fileID: 1309529057}
   speed: 5
+  idleDuration: 1
 --- !u!1 &955408043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,7 +2707,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.4561459, y: -4.0866, z: 0.061900444}
-  m_LocalScale: {x: 17.976599, y: 0.6846465, z: 1}
+  m_LocalScale: {x: 28.313145, y: 0.6846465, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 844601589}
@@ -3100,7 +3103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.5, y: -40}
+  m_AnchoredPosition: {x: -72.5, y: -72.5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242069133
@@ -3776,7 +3779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 72.5, y: -40}
+  m_AnchoredPosition: {x: 72.5, y: -72.5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491518855

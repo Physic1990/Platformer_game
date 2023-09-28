@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour{
         Health.text = "Health: " + CurrentPlayerHealth;        
     }
     void Update(){
+        if (Input.GetKey("escape")){
+            Application.Quit();
+        }
         if(Wintext.enabled){
             Pause();
         }
