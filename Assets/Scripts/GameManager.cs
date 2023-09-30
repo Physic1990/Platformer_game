@@ -58,4 +58,8 @@ public class GameManager : MonoBehaviour{
         Scoretext.text = "Score: "+ Score;
 
     }
+
+    public void Quit(){
+            Application.Quit();
+    }
 }
