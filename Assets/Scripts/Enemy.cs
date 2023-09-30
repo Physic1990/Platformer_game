@@ -29,11 +29,9 @@ public class Enemy : MonoBehaviour{
     private void Update(){
         distance = Vector2.Distance(transform.position,player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
-        if(distance<4){
+        if(distance<10){
             transform.position = Vector2.MoveTowards(this.transform.position,player.transform.position, speed*Time.deltaTime);
         }
-
-
         if(movingLeft){
             if(enemy.position.x >= leftEdge.position.x){
                 MoveInDirection(-1);
