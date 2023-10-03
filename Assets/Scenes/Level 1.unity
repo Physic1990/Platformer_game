@@ -817,6 +817,7 @@ GameObject:
   - component: {fileID: 235162725}
   - component: {fileID: 235162724}
   - component: {fileID: 235162728}
+  - component: {fileID: 235162729}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -887,8 +888,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.28, y: 0.71}
+    newSize: {x: 0.724, y: 1.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -937,12 +938,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.31443334, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 1428199231, guid: b32c820767eba8747add5eb588a1256a, type: 3}
+  m_Color: {r: 0.9622642, g: 0.9205056, b: 0.9205056, a: 0.59607846}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.724, y: 1.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -957,8 +958,8 @@ Transform:
   m_GameObject: {fileID: 235162723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.97, y: -3.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.6012, y: -3.7463, z: 0}
+  m_LocalScale: {x: 3.6342, y: 1.4328, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -975,8 +976,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9234e5d28334a468149eb59b8961f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extraJumps: 0
   speed: 10
   Threashold: -5
+--- !u!95 &235162729
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235162723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4254e84492ba9041987a51eaee7eb23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &263925154
 GameObject:
   m_ObjectHideFlags: 0
