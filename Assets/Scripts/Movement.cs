@@ -11,8 +11,16 @@ public class Movement : MonoBehaviour{
     public float Threashold;
     private bool grounded = true;
     private Vector3 SpawnPosition;
+
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
+    private AudioSource audioSource; // Reference to the AudioSource component
+
     private void Awake(){
         body = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
+
+        
     }
     void Start(){
         SpawnPosition = this.transform.position;
@@ -32,10 +40,17 @@ public class Movement : MonoBehaviour{
         }
     }
 
-    private void Jump(){
-        body.velocity = new Vector2(body.velocity.x,speed);
-        grounded = false;
+private void Jump(){
+    body.velocity = new Vector2(body.velocity.x, speed);
+    grounded = false;
+
+    // Play the jump sound
+    if (jumpSound != null)
+    {
+        AudioSource.PlayClipAtPoint(jumpSound, transform.position);
     }
+}
+
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Ground"){
             grounded = true; 
@@ -45,5 +60,6 @@ public class Movement : MonoBehaviour{
     public void Reset(){
         this.transform.position = SpawnPosition;
     }
+    
 
 }
