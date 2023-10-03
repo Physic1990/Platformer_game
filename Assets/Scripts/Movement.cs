@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour{
+
+    [SerializeField] private int extraJumps;
+    private int jumpCounter; 
     [SerializeField]private float speed;
     private Rigidbody2D body;
     public float Threashold;
@@ -20,6 +23,8 @@ public class Movement : MonoBehaviour{
         body.velocity = new Vector2(Input.GetAxis("Horizontal")*speed,body.velocity.y);
         if(Input.GetKey(KeyCode.Space)&& grounded){
             Jump();
+        }else if(!grounded&&jumpCounter>0&&(Input.GetKey(KeyCode.Space))){
+            Jump();
         }
         if(transform.position.y<Threashold){
             
@@ -34,6 +39,7 @@ public class Movement : MonoBehaviour{
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Ground"){
             grounded = true; 
+            jumpCounter = extraJumps;
         }
     }
     public void Reset(){
